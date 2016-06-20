@@ -39,7 +39,7 @@ v.Std()
 
 Print:
 ```
-fmt.Print
+fmt.Println(v.ToString())
 ```
 
 ## Contributing
