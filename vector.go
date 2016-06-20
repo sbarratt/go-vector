@@ -12,6 +12,13 @@ type Vector struct {
     items []float64
 }
 
+func MakeVector(n int) (v Vector, e error){
+    if n < 0 {
+        return Vector{make([]float64, 0)}, fmt.Errorf("n cannot be negative: %d", n)
+    }
+    return Vector{make([]float64, n)}
+}
+
 func (v Vector) Set(i int, value float64) (val float64, e error) {
     n := len(v.items)
     if (i < 0 || i >= len(v.items)) {
